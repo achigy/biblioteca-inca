@@ -1,0 +1,164 @@
+/* Variables de diseño e identidad editorial andina */
+:root {
+  --primary-andina: #993b1d; /* Terracota cálido / arcilla andina */
+  --primary-hover: #7c2d12;
+  --gold-inca: #c9822b;     /* Dorado incaico elegante */
+  --gold-light: #fef3c7;
+  --bg-sand: #fcfaf7;       /* Fondo apergaminado claro */
+  --bg-card: #ffffff;
+  --text-dark: #1c1917;     /* Carbón suave */
+  --text-muted: #57534e;    /* Gris cálido */
+  --border-subtle: #e7e2db;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Cinzel', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 30px -5px rgba(40, 20, 10, 0.08);
+  --shadow-lg: 0 20px 40px -15px rgba(40, 20, 10, 0.12);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  background-color: var(--bg-sand);
+}
+
+body {
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Tipografías de encabezados */
+h1, h2, h3, .font-serif {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.25;
+  color: #1a1614;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+}
+
+/* Clases utilitarias de layout */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 5.5rem 0;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary-andina);
+  background: rgba(153, 59, 29, 0.08);
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  margin-bottom: 1.2rem;
+  color: #1c1917;
+}
+
+.section-desc {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+/* Botones con estilo */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.btn-primary {
+  background: var(--primary-andina);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(153, 59, 29, 0.25);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(153, 59, 29, 0.35);
+}
+
+.btn-outline {
+  border: 1.5px solid var(--border-subtle);
+  background: #ffffff;
+  color: var(--text-dark);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary-andina);
+  color: var(--primary-andina);
+  background: #fdfaf7;
+  transform: translateY(-2px);
+}
+
+.btn-gold {
+  background: var(--gold-inca);
+  color: #fff;
+}
+.btn-gold:hover {
+  background: #ad6d21;
+  transform: translateY(-2px);
+}
+
+/* Patrón ornamental andino sutil */
+.inca-pattern-border {
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-andina) 0%, var(--gold-inca) 50%, var(--primary-andina) 100%);
+  width: 100%;
+}
