@@ -11,17 +11,43 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
-  return (
-    <div style={{
-      padding: '40px',
-      background: '#fcfaf7',
-      color: '#993b1d',
-      minHeight: '100vh'
-    }}>
-      <h1>Biblioteca Inca</h1>
-      <p>La página está funcionando correctamente.</p>
-    </div>
+    return (
+      <div className="app-container">
+        {/* 00 - Barra de navegación sticky */}
+        <Navbar />
+
+        <main>
+          {/* 01 · Inicio */}
+          <Hero />
+
+          {/* 02 · Nosotros e Historia */}
+          <About />
+
+          {/* 03 · Patrimonio (+300.000 ejemplares y 6 países) */}
+          <Heritage />
+
+          {/* 04 · Cultura y Actividades */}
+          <Culture />
+
+          {/* 05 · Impacto Social y Público */}
+          <SocialImpact />
+
+          {/* 06 · Librería y Publicaciones */}
+          <Bookstore />
+
+          {/* 07 · Colabora / Alianzas / Proyección */}
+          <Collaborate />
+
+          {/* 08 · Contacto y Ubicación */}
+          <Contact />
+        </main>
+
+        {/* Pie de página institucional */}
+        <Footer />
+      </div>
   );
 }
+
+
 
 export default App;
